@@ -21,10 +21,27 @@ const Sidebar: React.FC<SidebarProps> = ({ currentTheme, onThemeChange, onNaviga
 
       <nav className="flex-1 space-y-2">
         <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-4 px-3">NAVEGACIÓN</p>
-        <NavItem active icon="timer" label="Focus Zone" onClick={() => onNavigate(AppView.DASHBOARD)} />
-        <NavItem icon="bar_chart" label="Estadísticas" onClick={() => onNavigate(AppView.HISTORY)} />
-        <NavItem icon="hub" label="Integraciones" onClick={() => onNavigate(AppView.INTEGRATIONS)} />
-        <NavItem icon="translate" label="Traductor" onClick={onToggleTranslator} />
+        <NavItem 
+          active={true} 
+          icon="timer" 
+          label="Focus Zone" 
+          onClick={() => onNavigate(AppView.DASHBOARD)} 
+        />
+        <NavItem 
+          icon="bar_chart" 
+          label="Estadísticas" 
+          onClick={() => onNavigate(AppView.HISTORY)} 
+        />
+        <NavItem 
+          icon="hub" 
+          label="Integraciones" 
+          onClick={() => onNavigate(AppView.INTEGRATIONS)} 
+        />
+        <NavItem 
+          icon="translate" 
+          label="Traductor" 
+          onClick={onToggleTranslator} 
+        />
         
         <div className="my-8 h-px bg-white/5 mx-3"></div>
         
@@ -53,8 +70,11 @@ const Sidebar: React.FC<SidebarProps> = ({ currentTheme, onThemeChange, onNaviga
       </nav>
 
       <div className="mt-auto pt-6 border-t border-white/5">
-        <div className="flex items-center gap-3 p-2 rounded-2xl hover:bg-white/5 cursor-pointer transition-all group">
-          <img src="https://picsum.photos/100/100?random=1" class="w-10 h-10 rounded-full border-2 border-white/10" />
+        <div 
+          onClick={() => onNavigate(AppView.SETTINGS)}
+          className="flex items-center gap-3 p-2 rounded-2xl hover:bg-white/5 cursor-pointer transition-all group"
+        >
+          <img src="https://picsum.photos/100/100?random=1" className="w-10 h-10 rounded-full border-2 border-white/10" />
           <div className="flex-1 min-w-0">
              <p className="text-sm font-bold truncate">Alex Morgan</p>
              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-tight group-hover:text-emerald-400 transition-colors">Premium Member</p>

@@ -33,7 +33,7 @@ const History: React.FC<HistoryProps> = ({ onNavigate }) => {
         </header>
 
         <div className="space-y-8">
-           <div class="sticky top-0 bg-[#111418] py-4 border-b border-white/5 flex items-center gap-3">
+           <div className="sticky top-0 bg-[#111418] py-4 border-b border-white/5 flex items-center gap-3">
               <h2 className="text-xl font-bold">Hoy</h2>
               <span className="text-gray-600 font-medium">Jueves, 24 de Octubre</span>
            </div>
@@ -43,7 +43,7 @@ const History: React.FC<HistoryProps> = ({ onNavigate }) => {
              ))}
            </div>
 
-           <div class="sticky top-0 bg-[#111418] py-4 border-b border-white/5 flex items-center gap-3 pt-10">
+           <div className="sticky top-0 bg-[#111418] py-4 border-b border-white/5 flex items-center gap-3 pt-10">
               <h2 className="text-xl font-bold">Ayer</h2>
               <span className="text-gray-600 font-medium">Miércoles, 23 de Octubre</span>
            </div>
